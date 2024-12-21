@@ -34,11 +34,11 @@ int main(void)
         free(pointers);
         return rc;
     }
-
-    arr_output(pointers, duplicates, cnt_unic_names);
-
+    FILE *f_out = fopen(OUT_FILE, "w");
+    arr_output(f_out, pointers, duplicates, cnt_unic_names);
     free_arr(pointers, cnt_unic_names);
     free(duplicates);
+    fclose(f_out);
 
     return RC_OK;
 }

@@ -62,8 +62,8 @@ void free_arr(char **pointers, size_t cnt)
     free(pointers);
 }
 
-void arr_output(char **pointers, int *duplicates, size_t cnt)
+void arr_output(FILE *f, char **pointers, int *duplicates, size_t cnt)
 {
     for (size_t i = 0; i < cnt; i++)
-        printf("%s %d\n", pointers[i], duplicates[i] + 1);
+        fprintf(f, "%s %d\n", pointers[i], duplicates[i] + 1);
 }

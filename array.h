@@ -14,11 +14,12 @@
 #define MAX_LEN_STR 50
 
 #define IN_FILE "in.txt"
+#define OUT_FILE "out.txt"
 
 
 int cnt_items(FILE *f, int *cnt_items);
 int fill_arr(FILE *f, char ***pointers, int *duplicates, size_t cnt, size_t *cnt_unic);
-void arr_output(char **pointers, int *duplicates, size_t cnt);
+void arr_output(FILE *f, char **pointers, int *duplicates, size_t cnt);
 void free_arr(char **pointers, size_t cnt);
 
 #endif
